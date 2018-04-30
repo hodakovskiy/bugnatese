@@ -1,0 +1,7 @@
+{% if categories %}
+<ul class="list-unstyled menu">
+  {% for category in categories %}
+  <li><a href="{{ category.href }}">{{ category.name }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}

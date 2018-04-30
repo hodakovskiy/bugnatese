@@ -1,0 +1,23 @@
+{% if languages|length > 1 %}
+<div class="pull-left">
+<form action="{{ action}}" method="post" enctype="multipart/form-data" id="language">
+  <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
+    {% for language in languages %}
+      {% if language.code == code %}
+      <span class="language-name">{{ language.name }}</span>
+      {% endif %}
+    {% endfor %}
+    <i class="fa fa-angle-down"></i></button>
+    <ul class="dropdown-menu">
+      <li class="dropdown-triangle"></li>
+      {% for language in languages %}
+      <li><a href="{{ language.code }}" class="currency-select btn btn-block">{{ language.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <input type="hidden" name="code" value="" />
+  <input type="hidden" name="redirect" value="{{ redirect }}" />
+</form>
+</div>
+{% endif %}

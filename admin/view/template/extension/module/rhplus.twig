@@ -1,0 +1,105 @@
+{{ header }} {{ column_left }}
+<div id="content">
+  <div class="page-header">
+    <div class="container-fluid">
+      <div class="pull-right">
+        <button type="submit" form="form-rhplus" data-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fa fa-save"></i></button>
+        <a href="{{ cancel }}" data-toggle="tooltip" title="{{ button_cancel }}" class="btn btn-default"><i class="fa fa-reply"></i></a></div>
+      <h1>{{ heading_title }}</h1>
+      <ul class="breadcrumb">
+        {% for breadcrumb in breadcrumbs %}
+        <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid">
+    {% if error_warning %}
+    <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    {% endif %}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-pencil"></i> {{ text_edit }}</h3>
+      </div>
+      <div class="panel-body">
+        <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-rhplus" class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-facebook">{{ entry_facebook }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="rhplus_module_facebook" value="{{ rhplus_module_facebook }}" placeholder="https://www.facebook.com/username" id="input-facebook" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-pinterest">{{ entry_pinterest }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="rhplus_module_pinterest" value="{{ rhplus_module_pinterest }}" placeholder="https://www.pinterest.com/username" id="input-pinterest" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-twitter">{{ entry_twitter }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="rhplus_module_twitter" value="{{ rhplus_module_twitter }}" placeholder="https://www.twitter.com/username" id="input-twitter" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-instagram">{{ entry_instagram }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="rhplus_module_instagram" value="{{ rhplus_module_instagram }}" placeholder="https://www.instagram.com/username" id="input-instagram" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-skype">{{ entry_skype }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="rhplus_module_skype" value="{{ rhplus_module_skype }}" placeholder="Skype ID" id="input-skype" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-linkedin">{{ entry_linkedin }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="rhplus_module_linkedin" value="{{ rhplus_module_linkedin }}" placeholder="https://www.linkedin.com/in/username" id="input-linkedin" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-tumblr">{{ entry_tumblr }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="rhplus_module_tumblr" value="{{ rhplus_module_tumblr }}" placeholder="http://blogname.tumblr.com" id="input-tumblr" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-googleplus">{{ entry_googleplus }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="rhplus_module_googleplus" value="{{ rhplus_module_googleplus }}" placeholder="https://plus.google.com/username" id="input-googleplus" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-youtube">{{ entry_youtube }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="rhplus_module_youtube" value="{{ rhplus_module_youtube }}" placeholder="https://www.youtube.com/user/username" id="input-youtube" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-etsy">{{ entry_etsy }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="rhplus_module_etsy" value="{{ rhplus_module_etsy }}" placeholder="https://www.etsy.com/shop/shopname" id="input-etsy" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-vkontakte">{{ entry_vkontakte }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="rhplus_module_vkontakte" value="{{ rhplus_module_vkontakte }}" placeholder="https://vk.com/username" id="input-vkontakte" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-vimeo">{{ entry_vimeo }}</label>
+            <div class="col-sm-10">
+              <input type="text" name="rhplus_module_vimeo" value="{{ rhplus_module_vimeo }}" placeholder="https://vimeo.com/username" id="input-vimeo" class="form-control" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{{ footer }}

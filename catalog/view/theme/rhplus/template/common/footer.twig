@@ -1,0 +1,128 @@
+<footer>
+  <div class="container-fluid">
+    <div class="row">
+      {% if informations %}
+      <div class="col-sm-2">
+        <div class="btn-group dropup info">
+          <button type="button" data-toggle="dropdown" class="dropdown-toggle">
+            <i class="icon ion-ios-information-outline"></i>
+            <span>{{ text_information }}</span>
+          </button>
+          <ul class="dropdown-menu pull-right">
+            <li class="dropdown-triangle"></li>
+            {% for information in informations %}
+            <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endif %}
+      <div class="col-sm-2">
+        <div class="btn-group dropup service">
+          <button type="button" data-toggle="dropdown" class="dropdown-toggle">
+            <i class="icon ion-ios-people-outline"></i>
+            <span>{{ text_service }}</span>
+          </button>
+          <ul class="dropdown-menu pull-right">
+            <li class="dropdown-triangle"></li>
+            <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+            <li><a href="{{ return }}">{{ text_return }}</a></li>
+            <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="btn-group dropup extra">
+          <button type="button" data-toggle="dropdown" class="dropdown-toggle">
+            <i class="icon ion-ios-flask-outline"></i>
+            <span>{{ text_extra }}</span>
+          </button>
+          <ul class="dropdown-menu pull-right">
+            <li class="dropdown-triangle"></li>
+            <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+            <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
+            <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
+            <li><a href="{{ special }}">{{ text_special }}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="btn-group dropup user-account">
+          <button type="button" data-toggle="dropdown" class="dropdown-toggle">
+            <i class="icon ion-ios-person-outline"></i>
+            <span>{{ text_account }}</span>
+          </button>
+          <ul class="dropdown-menu pull-right">
+            <li class="dropdown-triangle"></li>
+            <li><a href="{{ account }}">{{ text_account }}</a></li>
+            <li><a href="{{ order }}">{{ text_order }}</a></li>
+            <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+            <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="btn-group dropup social">
+          <button type="button" data-toggle="dropdown" class="dropdown-toggle">
+            <i class="icon ion-ios-world-outline"></i>
+            <span>Social</span>
+          </button>
+          <ul class="dropdown-menu pull-right">
+            <li class="dropdown-triangle"></li>
+            {% if twitter %}
+            <li><a href="{{ twitter }}" title="Twitter">Twitter</a></li>
+            {% endif %}
+            {% if facebook %}
+            <li><a href="{{ facebook }}" title="Facebook">Facebook</a></li>
+            {% endif %}
+            {% if pinterest %}
+            <li><a href="{{ pinterest }}" title="Pinterest">Pinterest</a></li>
+            {% endif %}
+            {% if instagram %}
+            <li><a href="{{ instagram }}" title="Instagram">Instagram</a></li>
+            {% endif %}
+            {% if skype %}
+            <li><a href="skype:{{ skype }}?call" title="Skype">Skype</a></li>
+            {% endif %}
+            {% if linkedin %}
+            <li><a href="{{ linkedin }}" title="Linkedin">Linkedin</a></li>
+            {% endif %}
+            {% if tumblr %}
+            <li><a href="{{ tumblr }}" title="Tumblr">Tumblr</a></li>
+            {% endif %}
+            {% if googleplus %}
+            <li><a href="{{ googleplus }}" title="Google Plus">Google+</a></li>
+            {% endif %}
+            {% if youtube %}
+            <li><a href="{{ youtube }}" title="YouTube">YouTube</a></li>
+            {% endif %}
+            {% if etsy %}
+            <li><a href="{{ etsy }}" title="Etsy">Etsy</a></li>
+            {% endif %}
+            {% if vkontakte %}
+            <li><a href="{{ vkontakte }}" title="VK">VK</a></li>
+            {% endif %}
+            {% if vimeo %}
+            <li><a href="{{ vimeo }}" title="Vimeo">Vimeo</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="btn-group dropup powered">
+          <button type="button" data-toggle="dropdown" class="dropdown-toggle">
+            <i class="icon ion-ios-bolt-outline"></i>
+            <span>Powered</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-triangle"></li>
+            <li><a href="http://themeforest.net/user/themefiber" target="_blank" title="design by themefiber">Design by themefiber</a></li>
+            <li><a href="http://opencart.com/" target="_blank" title="powered by opencart">Powered by OpenCart</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+</body></html>
